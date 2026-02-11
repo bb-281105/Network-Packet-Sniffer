@@ -30,48 +30,49 @@ A cross-platform packet sniffer that works on **Windows (NO Npcap required)**, L
 
 ### 🪟 Windows (Run as Administrator)
 
-# Capture all supported traffic (UDP, ICMP, outgoing TCP)
+#### Capture all supported traffic (UDP, ICMP, outgoing TCP)
 python packet_sniffer.py
 
-# Capture only UDP packets
+#### Capture only UDP packets
 python packet_sniffer.py -f udp
 
-# Capture only ICMP packets (ping)
+#### Capture only ICMP packets (ping)
 python packet_sniffer.py -f icmp
 
-# Capture only TCP packets (outgoing only)
+#### Capture only TCP packets (outgoing only)
 python packet_sniffer.py -f tcp
 
-# Capture 50 packets only
+#### Capture 50 packets only
 python packet_sniffer.py -c 50
 
-# Capture 100 UDP packets
+#### Capture 100 UDP packets
 python packet_sniffer.py -c 100 -f udp
 
-# List available network interfaces
+#### List available network interfaces
 python packet_sniffer.py -l
 
 ### 🐧 Linux / 🍎 macOS (Run as root)
 
-# Capture all traffic on default interface
+#### Capture all traffic on default interface
 sudo python3 packet_sniffer.py
 
-# Capture traffic on a specific interface
+#### Capture traffic on a specific interface
 sudo python3 packet_sniffer.py -i eth0
 sudo python3 packet_sniffer.py -i wlan0
 
-# Capture only UDP packets
+#### Capture only UDP packets
 sudo python3 packet_sniffer.py -i eth0 -f udp
 
-# Capture only TCP packets
+#### Capture only TCP packets
 sudo python3 packet_sniffer.py -i eth0 -f tcp
 
-# Capture only ICMP packets
+#### Capture only ICMP packets
 sudo python3 packet_sniffer.py -i eth0 -f icmp
 
-# Limit capture to 100 packets
+#### Limit capture to 100 packets
 sudo python3 packet_sniffer.py -i eth0 -c 100
 
-# List available interfaces
+#### List available interfaces
 sudo python3 packet_sniffer.py -l
+
 

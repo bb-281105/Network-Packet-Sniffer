@@ -1,26 +1,33 @@
-# Simple Network Packet Sniffer
+# Universal Packet Sniffer
 
-A basic network packet sniffer for educational purposes.
+A cross-platform packet sniffer that works on **Windows (NO Npcap required)**, Linux, and macOS. Built for educational purposes to understand network protocols and packet analysis.
 
-## ⚠️ IMPORTANT DISCLAIMER
-- **For educational use only**
-- **Only use on networks you own or have explicit permission to test**
-- **Unauthorized network sniffing may be illegal**
-- **Requires administrative privileges**
+## 🚨 Important Legal Notice
 
-## Features
-- Captures TCP, UDP, ICMP packets
-- Shows source and destination IPs
-- Displays port information
-- Optional BPF filter support
-- Shows packet payload (when available)
-- Cross-platform (Windows, Linux, Mac)
+**This tool is for EDUCATIONAL PURPOSES ONLY!**
+- Only use on networks you own or have explicit permission to monitor
+- Unauthorized packet sniffing may be illegal in your jurisdiction
+- The author is not responsible for any misuse of this software
 
-## Installation
+## ✨ Features
 
-1. **Install Python 3.6+**
-   - Download from [python.org](https://www.python.org)
+- **Windows**: Uses raw sockets - NO NPCAP/WinPcap required!
+- **Linux/macOS**: Full Ethernet frame capture via AF_PACKET
+- **Protocol Parsing**: TCP, UDP, ICMP, IP, Ethernet headers
+- **Real-time Display**: Source/destination IPs, ports, MAC addresses, TCP flags
+- **Basic Filtering**: Filter by protocol (tcp, udp, icmp)
+- **Cross-platform**: Same codebase works on all major OSes
 
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
+## 📋 Requirements
+
+- **Python 3.6+**
+- **Admin/root privileges** (required for raw sockets)
+- No external libraries needed! (Scapy in requirements.txt is optional)
+
+## 🚀 Quick Start
+
+### Windows (No Npcap!)
+# Run as Administrator
+python packet_sniffer.py
+python packet_sniffer.py -f udp
+python packet_sniffer.py -c 50 -f icmp
